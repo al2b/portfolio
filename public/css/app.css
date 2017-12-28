@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+html, body {
+  background-color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  margin: 0;
+  color: black; }
+
+p {
+  margin-left: 15px;
+  margin-right: 15px; }
+
+h1, h2 {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: #C14242; }
+
+h3 {
+  color: dimgrey; }
+
+.content {
+  text-align: center;
+  margin-top: 20px; }
+
+.title {
+  font-size: 84px;
+  color: #636b6f; }
+
+.links > a {
+  color: whitesmoke;
+  padding: 10px 10px;
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #C14242; }
+
+.nav {
+  padding: 1em 2em 2em;
+  display: inline; }
+
+@media all and (max-device-width: 480px) {
+  .links > a {
+    display: block;
+    font-size: 1.2em;
+    padding: 5px 5px; }
+  .nav {
+    display: inline;
+    padding: 0px; } }
+
+a:hover {
+  background-color: whitesmoke;
+  color: #C14242; }
+
+.m-b-md {
+  font-size: 2em;
+  color: #C14242;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none; }
+
+.container-row1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row; }
+
+.me {
+  max-width: 500px;
+  color: black;
+  font-weight: 500;
+  font-size: 1.4em;
+  letter-spacing: .1rem;
+  margin-bottom: 20px;
+  text-align: left; }
+
+.real {
+  max-width: 1000px;
+  color: black;
+  font-weight: normal;
+  font-size: 1em;
+  letter-spacing: .1rem;
+  text-align: justify;
+  right: 15px;
+  display: flex;
+  flex-direction: column; }
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 0;
+  align-items: center; }
+
+img {
+  width: 80%;
+  height: auto;
+  padding: 25px; }
+
+.barre {
+  background-color: #C14242;
+  height: 2px;
+  max-width: 1000px;
+  width: 100%; }
