@@ -7,18 +7,21 @@
 @endsection
 @section('content')
 
-    <h2>Derniers articles</h2>
     <div class="container1">
 
         <div class="real">
 
 
 
-                <div class="content-real">
+                <div class="real">
 
-                    <h3>{!!  $article->title  !!}</h3>
-                    <p>Publié le : {!! $article->created_at !!}</p>
-                    <p>{!! $article->contenu  !!}</p>
+                    <h1>{!!  $article->title  !!}</h1>
+                    <p><i>Publié le : {!! date('d-m-Y', strtotime($article->created_at)) !!} par Anne-Laure</i></p>
+                    {!! $article->description, $article->contenu  !!}
+                    <p><b>Voir d'autres articles :</b></p>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </div>
 
 

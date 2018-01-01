@@ -7,12 +7,13 @@
 @endsection
 @section('content')
 
-                <div class="title m-b-md">
-                    <p>AL2B,<br>
-                   développeuse web PHP/Symfony.</p>
-                </div>
+
 
                 <div class="container1">
+                    <div class="title m-b-md">
+                        <p>AL2B,<br>
+                            développeuse web PHP/Symfony.</p>
+                    </div>
                     <div class="container-row1">
                         <div class="me"><img src="{{ asset('img/al-deboissieu.jpg') }}" class="img"></div>
 
@@ -70,11 +71,9 @@
                     <div class="barre"></div>
 
                 </div>
-
-                <div class="links">
-                    <a href="http://localhost:8000/cv">CV</a>
-                    <a href="http://localhost:8000/">Contact</a>
-                </div>
+                @endsection
+@section('navbar')
+    @parent
 @endsection
 
 

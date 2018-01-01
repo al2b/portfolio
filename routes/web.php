@@ -19,7 +19,7 @@ Route::namespace('Fo')->group(function () {
 
     Route::get('/blog',"BlogController@welcomeblog");
 
-    Route::get('/blog/article',"BlogController@article");
+    Route::get('/blog/{id}',"BlogController@show");
 
     Route::get('/cv', function () {
         return view('cv');

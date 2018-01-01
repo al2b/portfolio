@@ -6,14 +6,17 @@ html, body {
   margin: 0;
   color: black; }
 
-p {
+p, li {
   margin-left: 15px;
-  margin-right: 15px; }
+  margin-right: 15px;
+  text-align: left;
+  font-size: 1.2em; }
 
 h1, h2 {
   margin-left: 15px;
   margin-right: 15px;
-  color: #C14242; }
+  color: #C14242;
+  text-align: left; }
 
 h3 {
   color: dimgrey; }
@@ -104,3 +107,11 @@ img {
   height: 2px;
   max-width: 1000px;
   width: 100%; }
+
+.footer {
+  color: black;
+  padding: 10px 10px;
+  font-size: 1.4em;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none; }
