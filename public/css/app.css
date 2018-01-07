@@ -20,6 +20,8 @@ h1, h2 {
 
 h3 {
   color: dimgrey; }
+  h3 a:link {
+    text-decoration: none; }
 
 .content {
   text-align: center;

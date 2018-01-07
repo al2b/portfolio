@@ -24,7 +24,7 @@
             <a href="http://localhost:8000/">Accueil</a>
             <a href="http://localhost:8000/blog">Blog</a>
             <a href="http://localhost:8000/cv">CV</a>
-            <a href="http://localhost:8000/">Réalisations</a>
+            <a href="http://localhost:8000/my-work">Réalisations</a>
             <a href="http://localhost:8000/">Contact</a>
         </div>
         </div>

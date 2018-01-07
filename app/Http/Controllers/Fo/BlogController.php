@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\Fo;
 
 use App\Article;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
 
 
 class BlogController extends Controller
@@ -25,7 +23,12 @@ class BlogController extends Controller
     public function show($id){
 
         $article =  Article::findOrFail($id);
+        $articles = Article::where('active', 1)
+            ->orderBy('created_at', 'desc')
+            ->take(3)
+            ->get();
         return view('blog.article',
-            ['article'=> $article ]);
+            ['article'=> $article ],
+            ['articles' => $articles]);
     }
 }

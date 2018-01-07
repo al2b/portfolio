@@ -11,7 +11,7 @@
 
                 <div class="container1">
                     <div class="title m-b-md">
-                        <p>AL2B,<br>
+                        <p>Anne-Laure,<br>
                             développeuse web PHP/Symfony.</p>
                     </div>
                     <div class="container-row1">
@@ -44,7 +44,7 @@
                                 <b>Technologies :</b> Symfony 3.3, Materialize,
                         </p>
                                 <div class="links">
-                                    <a href="https://laravel.com/docs">Voir toutes mes réalisations</a>
+                                    <a href="/my-work">Voir toutes mes réalisations</a>
                                 </div>
                             </div>
 

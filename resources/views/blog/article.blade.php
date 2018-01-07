@@ -19,9 +19,12 @@
                     <p><i>Publié le : {!! date('d-m-Y', strtotime($article->created_at)) !!} par Anne-Laure</i></p>
                     {!! $article->description, $article->contenu  !!}
                     <p><b>Voir d'autres articles :</b></p>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <ul>
+                @foreach ($articles as $arti)
+                            <li> <a href="{!! $arti->id !!}"> {!! $arti->title !!} </a> </li>
+
+                    @endforeach
+                    </ul>
                 </div>
 
 

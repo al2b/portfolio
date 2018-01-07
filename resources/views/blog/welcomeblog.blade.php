@@ -20,10 +20,10 @@
         @foreach($articles as $article)
         <div class="content-real">
 
-        <h3>{!!  $article->title  !!}</h3>
+            <h3><a href="blog/{!! $article->id !!}">{!!  $article->title  !!}</a></h3>
             <p>Publié le : {!! $article->created_at !!}</p>
-            <p>{!! $article->description  !!}</p>
-            <p><a href="blog/{!! $article->id !!}"> Lire la suite </a></p>
+            <p>{!! $article->description  !!}
+            <a href="blog/{!! $article->id !!}"> Lire la suite </a></p>
         </div>
 
     @endforeach
