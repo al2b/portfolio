@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('Main')->group(function () {
+    Route::get('/', "MainController@index");
 });
 
 Route::namespace('Work')->group(function () {

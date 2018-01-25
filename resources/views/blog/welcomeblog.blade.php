@@ -7,28 +7,46 @@
 @endsection
 @section('content')
 
-<div class="container1">
-
-    <div class="real">
+    <div class="row">
+        <div class="col">
         <h1>Mon blog</h1>
+        </div>
+    </div>
         <p>
         Je partage ici pèle-mèle mes expériences sur mon apprentissage du développement, sur les réalisations ou les différents projets sur lesquels j'ai pu collaborer. On peut également y trouver quelques billets d'humeur. J'espère que la visite vous plaira ;)
     </p>
-    <div class="barre"></div>
 
+        <?php $i = 0; ?>
 
         @foreach($articles as $article)
-        <div class="content-real">
+            <div class="row">
 
-            <h3><a href="blog/{!! $article->id !!}">{!!  $article->title  !!}</a></h3>
+            <div class="col">
+                <div class="card">
+
+            <h5><a href="blog/{!! $article->id !!}">{!!  $article->title  !!}</a></h5>
             <p>Publié le : {!! $article->created_at !!}</p>
-            <p>{!! $article->description  !!}
-            <a href="blog/{!! $article->id !!}"> Lire la suite </a></p>
-        </div>
+                    <div class="row">
+                        <?php if($i % 2) {?>
 
-    @endforeach
-</div>
-</div>
+                        <div class="col"><p>{!! $article->description  !!}</p>            <a href="blog/{!! $article->id !!}"> Lire la suite </a>
+                        </div>
+                        <div class="col-4"><img src="{{ asset('img/nicolas.png') }}" alt="{!!  $article->title  !!}" class="img-fluid"> </div>
+                        <?php }else{?>
+                            <div class="col-4"><img src="{{ asset('img/nicolas.png') }}" alt="{!!  $article->title  !!}" class="img-fluid"> </div>
+
+                            <div class="col"><p>{!! $article->description  !!}</p>            <a href="blog/{!! $article->id !!}"> Lire la suite </a>
+                            </div>
+
+
+                        <?php }?>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+            <?php $i++;?>
+        @endforeach
 
 @endsection
 @section('footer')
