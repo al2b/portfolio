@@ -71,6 +71,9 @@ h1, h2 {
     .col a:hover, .col a:active {
       color: #175f42; }
 
+.home h2 {
+  margin-top: 20px; }
+
 .card {
   min-height: 100%;
   padding: 30px; }

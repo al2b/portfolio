@@ -19,56 +19,15 @@
             <img src="{{ asset('img/al-deboissieu.jpg') }}" class="img-fluid ">
         </div>
         <div class="col">
-            <p>Après quelques années dédiées au SEO et à la gestion de projets webs, j'ai décidé de <b>me tourner vers
-                    le développement web </b> dans un premier temps par simple curiosité. J'ai rapidement su que je
-                devais en faire mon métier. <br> <br> J'ai suivi une <b>formation spécialisée en PHP où j'ai notamment
-                    exploré Symfony&nbsp;3.</b> <br> <br> J'aime découvrir de nouvelles technologies (comme NodeJS) et
-                de nouveaux frameworks (comme Laravel), le cinéma bis et me déplacer en vélo. <br> <br> Merci pour votre
-                visite !</p>
+            <p>Je travaille dans le web depuis 2010, où j'ai exercé différents métiers autour de la gestion web et du SEO, en agence web puis directement chez l'annonceur. J'ai décidé de me former au métier de développeur web car ce qui m'intéresse est de "construire" une application : j'aime participer à la réflexion autour de sa conception et surtout mettre en oeuvre sa réalisation.</p> <p>Après avoir suivi une formation à la Wild Code School, j'ai décidé de m'orienter vers le développement orienté back-office. Mon langage de prédilection est PHP, j'ai travaillé sur des frameworks tels que Symfony et Laravel.</p><p>Je travaille sur différents projets personnels afin de développer mes compétences en PHP.  </p>
 
 
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <h2>Mes dernières réalisations</h2>
 
-                <h3>Moteur de recherche / comparateur : compare.pro</h3>
-                <div class="row">
-                    <div class="col">
-                        <p class="lead">Dans le cadre de ma formation, au sein d'une équipe de 4 personnes, j'ai réalisé un site
-                            permettant de trouver le meilleur outil de marketing automation pour son entreprise.
-                            <br>Les principales fonctionnalités sont :
-                            <br>
-                        <ul>
-                            <li> un moteur de recherche et un algorithme pour affiner la pertinence des résultats,</li>
-                            <li>un outil d'import/export de base de données permettant l'évolution du schema,</li>
-                            <li> une fonctionnalité de comparaison des produits entre eux.</li>
-                        </ul>
-                        <b>Technologies :</b> Symfony 3.3, Materialize,
-                    </div>
-                    <div class="col">
-                        <img src="{{ asset('img/nicolas.png') }}" alt="" class="img-fluid">
-                    </div>
-                </div>
-
-                <div>
-                    <button type="button" href="/my-work" class="btn-lg btn btn-outline-secondary float-right">Voir tous
-                        mes travaux
-                    </button>
-                </div>
-
-            </div>
-        </div>
-    </div>
     <div class="row">
-        <div class="col">
-            <h2>Un peu de lecture ? </h2>
+        <div class="col home">
+            <h2><a href="/blog"> Un peu de lecture ? </a></h2>
         </div>
     </div>
 
@@ -87,9 +46,12 @@
                         <h6 class="card-subtitle mb-2 text-muted">Publié le : {!! $article->created_at !!}</h6>
                         <p class="card-text">{!! $article->description  !!}</p>
                         <div>
-                            <button type="button" href="blog/{!! $article->id !!}"
-                                    class="btn btn-outline-secondary float-right">Lire la suite
-                            </button>
+                            <a href="blog/{!! $article->id !!}">
+                                <button type="button"
+                                        class="btn btn-outline-secondary float-right">Lire la suite
+                                </button>
+                            </a>
+
                         </div>
                     </div>
                 </div>

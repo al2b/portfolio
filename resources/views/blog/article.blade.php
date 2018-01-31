@@ -19,6 +19,7 @@
                         {!! $article->description!!}
                     </div>
 
+
                     <div class="col-4">
                         <img src="{{ asset('img/nicolas.png') }}" alt="" class="img-float-right img-fluid">
                     </div>

@@ -35,3 +35,9 @@ Route::namespace('Fo')->group(function () {
 
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/new-article', 'HomeController@createArticle')->name('new-article');
+Route::post('/article', 'HomeController@store')->name('article');
