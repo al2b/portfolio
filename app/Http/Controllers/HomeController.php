@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
+use App\Http\Requests\StoreArticlePost;
+use Faker\Provider\DateTime;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -23,7 +28,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $articles = Article::all();
+        $categories = Category::all();
+        return view('home',
+            ['articles' => $articles,
+                'categories' => $categories]);
     }
 
     /**
@@ -33,12 +42,61 @@ class HomeController extends Controller
      */
     public function createArticle()
     {
-        return view('blog.new-article');
+        $categories = Category::all();
+        $select = [];
+        foreach($categories as $category){
+            $select[$category->id] = $category->name;
+        }
+
+        return view('bo.new-article',
+            ['select' => $select]);
     }
 
-    public function store()
+    /**
+     * Register a new article
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function store(StoreArticlePost $request)
     {
-        $input = Request::all();
-        return $input;
+        $input = $request->all();
+        $article = new Article();
+
+        $article->title = $input["title"];
+        $article->description = $input["description"];
+        $article->contenu = $input["contenu"];
+        $article->slug = $input["slug"];
+        $article->active = $input["active"];
+        $article->created_at = Carbon::now();
+        if(!empty($input["category"])) {
+            $article->category_id = $input["category"];
+        }
+        $article->save();
+        return redirect()->route('home')->with('status', 'Article ajouté : well done !');
     }
+
+    /**
+     * Show a single article
+     *
+     * @return Response
+     */
+    public function view($id){
+
+        $article =  Article::findOrFail($id);
+
+        return view('bo.display-article',
+            ['article'=> $article ]
+            );
+    }
+
+    public function remove($id){
+        Post::destroy($id);
+        return redirect()->action('HomeController@index');
+    }
+
+    public function update($id){
+        Post::destroy($id);
+        return redirect()->action('HomeController@index');
+    }
+
 }

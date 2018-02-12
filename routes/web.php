@@ -24,7 +24,9 @@ Route::namespace('Fo')->group(function () {
 
     Route::get('/blog',"BlogController@welcomeblog");
 
-    Route::get('/blog/{id}',"BlogController@show");
+    Route::get('/blog/{slug}',"BlogController@showCat");
+
+    Route::get('/blog/category/{slug}',"BlogController@show");
 
 
     Route::get('/cv', function () {
@@ -39,5 +41,10 @@ Route::namespace('Fo')->group(function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/new-article', 'HomeController@createArticle')->name('new-article');
 Route::post('/article', 'HomeController@store')->name('article');
+Route::get('/posts/create', 'HomeController@createArticle');
+
+Route::post('/posts/store', 'HomeController@store');
+Route::get('/posts/{id}', 'HomeController@view');
+Route::post('posts/{id}/update', 'HomePostController@update');
+

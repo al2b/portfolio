@@ -28,7 +28,7 @@
                     <p><b>Voir d'autres articles :</b></p>
                     <ul>
                 @foreach ($articles as $arti)
-                            <li> <a href="{!! $arti->id !!}"> {!! $arti->title !!} </a> </li>
+                            <li> <a href="{!! $arti->slug !!}"> {!! $arti->title !!} </a> </li>
 
                     @endforeach
                     </ul>
