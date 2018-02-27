@@ -24,9 +24,9 @@ Route::namespace('Fo')->group(function () {
 
     Route::get('/blog',"BlogController@welcomeblog");
 
-    Route::get('/blog/{slug}',"BlogController@showCat");
+    Route::get('/blog/{slug}',"BlogController@show");
 
-    Route::get('/blog/category/{slug}',"BlogController@show");
+    Route::get('/blog/category/{slug}',"BlogController@showCat");
 
 
     Route::get('/cv', function () {

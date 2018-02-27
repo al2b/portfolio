@@ -19,9 +19,10 @@
             <img src="{{ asset('img/al-deboissieu.jpg') }}" class="img-fluid ">
         </div>
         <div class="col">
-            <p>Je travaille dans le web depuis 2010, où j'ai exercé différents métiers autour de la gestion web et du SEO, en agence web puis directement chez l'annonceur. J'ai décidé de me former au métier de développeur web car ce qui m'intéresse est de "construire" une application : j'aime participer à la réflexion autour de sa conception et surtout mettre en oeuvre sa réalisation.</p>
+            <p>Je travaille dans le web depuis 2010, où j'ai exercé différents métiers autour de la gestion web et du SEO, en agence web puis directement chez l'annonceur. <p>En 2017, j'ai décidé de changer de métier. J'ai toujours rêvé de faire du développement web, mais j'ai longtemps pensé que cela me serait inaccessible compte-tenu de ma formation initiale très éloignée. Aujourd'hui, je suis très heureuse de mon choix. Le matin, je me lève le coeur léger avec une seule idée en tête : coder, coder et coder ! </p></p>
             <p>Après avoir suivi une formation à la Wild Code School, j'ai décidé de m'orienter vers le développement orienté back-office. Mon langage de prédilection est le PHP, je travaille sur différents projets personnels afin de développer mes compétences notamment sur les frameworks Laravel et Symfony.</p>
             <p>En parallèle, je me forme via des plateformes de cours sur des frameworks JavaScript tels que React et VueJS.</p>
+
 
 
         </div>

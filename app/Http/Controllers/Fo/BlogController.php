@@ -43,8 +43,8 @@ class BlogController extends Controller
     public function showCat($slugCat){
 
         $category = Category::where('slug', $slugCat)->first();
-        $articles = Article::where('category_id', $category->id)->orderBy('created_at', 'desc')->get();
-        return view('blog.welcomeblog',
+        $articles = Article::where('category_id', $category)->orderBy('created_at', 'desc')->get();
+        return view('blog.category',
             ['category'=> $category ],
             ['articles' => $articles]);
     }
