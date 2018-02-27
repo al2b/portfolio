@@ -19,14 +19,7 @@
             J'espère que la visite vous plaira ;)
 
         </div>
-        <div class="col">
-            <h2>Catégories :</h2>
-            <ul>
-                @foreach($categories as $categori)
-                    <li>{{$categori->name}}</li>
-                @endforeach
-            </ul>
-        </div>
+
     </div>
 
     <?php $i = 0; ?>

@@ -11,17 +11,40 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('Main')->group(function () {
+    Route::get('/', "MainController@index");
+});
+
+Route::namespace('Work')->group(function () {
+    Route::get('/my-work',"WorkController@showWork");
+
 });
 
 Route::namespace('Fo')->group(function () {
 
     Route::get('/blog',"BlogController@welcomeblog");
 
-    Route::get('/blog/{id}',"BlogController@show");
+    Route::get('/blog/{slug}',"BlogController@show");
+
+    Route::get('/blog/category/{slug}',"BlogController@showCat");
+
 
     Route::get('/cv', function () {
         return view('cv');
     });
+
+
+
+
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/article', 'HomeController@store')->name('article');
+Route::get('/posts/create', 'HomeController@createArticle');
+
+Route::post('/posts/store', 'HomeController@store');
+Route::get('/posts/{id}', 'HomeController@view');
+Route::post('posts/{id}/update', 'HomePostController@update');
+

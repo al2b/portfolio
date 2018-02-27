@@ -31,7 +31,7 @@
                     <a class="nav-link {!!(Request::is('/')) ? ' active ' : '' !!}" href="/">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {!!(Request::is('blog')) ? ' active ' : '' !!}" href="/blog">Blog</a>
+                    <a class="nav-link {!!(Request::is('blog')) ? ' active ' : '' !!}" href="/posts/create">Nouvel article</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {!!(Request::is('my-work')) ? ' active ' : '' !!}"
@@ -52,23 +52,18 @@
     @yield('content')
 
     @section('footer')
-        <div class="col">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link" href="/">Accueil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/blog">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/cv">CV</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/my-work">Réalisations</a>
-            </li>
-        </ul>
+        <div class="row">
+            <div class="col">
+                <div class="footer">
+                    <ul class="footer">
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="/blog">Tous les articles du blog</a></li>
+                        <li><a href="/cv">Mon CV</a></li>
+                        <li><a href="/my-work">Mes réalisations</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
     @show
 </div>
 @section('js')

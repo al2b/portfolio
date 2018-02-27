@@ -7,24 +7,33 @@
 @endsection
 @section('content')
 
-    <div class="container1">
+    <div class="row">
 
-        <div class="real">
+        <div class="col">
+            <div class="card">
+                <h1>{!!  $article->title  !!}</h1>
+
+                <p><i>Publié le : {!! date('d-m-Y', strtotime($article->created_at)) !!} par Anne-Laure</i></p>
+                <div class="row">
+                    <div class="col">
+                        {!! $article->description!!}
+                    </div>
 
 
-
-                <div class="real">
-
-                    <h1>{!!  $article->title  !!}</h1>
-                    <p><i>Publié le : {!! date('d-m-Y', strtotime($article->created_at)) !!} par Anne-Laure</i></p>
-                    {!! $article->description, $article->contenu  !!}
-                    <p><b>Voir d'autres articles :</b></p>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <div class="col-4">
+                        <img src="{{ asset('img/nicolas.png') }}" alt="" class="img-float-right img-fluid">
+                    </div>
                 </div>
+                    {!! $article->contenu  !!}
+                    <p><b>Voir d'autres articles :</b></p>
+                    <ul>
+                @foreach ($articles as $arti)
+                            <li> <a href="{!! $arti->slug !!}"> {!! $arti->title !!} </a> </li>
 
+                    @endforeach
+                    </ul>
 
+            </div>
         </div>
     </div>
 

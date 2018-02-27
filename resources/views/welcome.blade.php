@@ -5,75 +5,72 @@
 @section('navbar')
     @parent
 @endsection
+
 @section('content')
 
+    <div class="row">
+        <div class="col">
+            <h1>Anne-Laure, développeuse web PHP/Symfony.</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-4 hidden-sm">
+            <img src="{{ asset('img/al-deboissieu.jpg') }}" class="img-fluid ">
+        </div>
+        <div class="col">
+            <p>Je travaille dans le web depuis 2010, où j'ai exercé différents métiers autour de la gestion web et du SEO, en agence web puis directement chez l'annonceur. <p>En 2017, j'ai décidé de changer de métier. J'ai toujours rêvé de faire du développement web, mais j'ai longtemps pensé que cela me serait inaccessible compte-tenu de ma formation initiale très éloignée. Aujourd'hui, je suis très heureuse de mon choix. Le matin, je me lève le coeur léger avec une seule idée en tête : coder, coder et coder ! </p></p>
+            <p>Après avoir suivi une formation à la Wild Code School, j'ai décidé de m'orienter vers le développement orienté back-office. Mon langage de prédilection est le PHP, je travaille sur différents projets personnels afin de développer mes compétences notamment sur les frameworks Laravel et Symfony.</p>
+            <p>En parallèle, je me forme via des plateformes de cours sur des frameworks JavaScript tels que React et VueJS.</p>
 
 
-                <div class="container1">
-                    <div class="title m-b-md">
-                        <p>AL2B,<br>
-                            développeuse web PHP/Symfony.</p>
-                    </div>
-                    <div class="container-row1">
-                        <div class="me"><img src="{{ asset('img/al-deboissieu.jpg') }}" class="img"></div>
 
-                        <div class="me">
+        </div>
+    </div>
 
-                            <p>Après quelques années dédiées au SEO et à la gestion de projets webs, j'ai décidé de <b>me tourner vers
-                                le développement web </b> dans un premier temps par simple curiosité. J'ai rapidement su que je devais en faire mon métier. <br> <br> J'ai suivi une <b>formation spécialisée en PHP où j'ai notamment exploré Symfony&nbsp;3.</b>  <br> <br> J'aime découvrir de nouvelles technologies (comme NodeJS) et de nouveaux frameworks (comme Laravel), le cinéma bis et me déplacer en vélo. <br> <br> Merci pour votre visite !</p>
+    <div class="row">
+        <div class="col home">
+            <h2><a href="/blog"> Un peu de lecture ? </a></h2>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <?php $i = 0;?>
+
+        @foreach($articles as $article)
+
+            <div class="col">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="blog/{{ $article->slug }}">{{  $article->title  }}</a>
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Publié le : {{ $article->created_at }}</h6>
+                        <p class="card-text">{{ $article->description  }}</p>
+                        <div>
+                            <a href="blog/{{ $article->slug }}">
+                                <button type="button"
+                                        class="btn btn-outline-secondary float-right">Lire la suite
+                                </button>
+                            </a>
 
                         </div>
-
                     </div>
-                    <div class="barre"></div>
-
-                        <div class="real">
-                            <div class="content-real">
-                                <h2> Dernière réalisation</h2>
-                                <h3>Moteur de recherche / comparateur : compare.pro</h3>
-                        <p>Dans le cadre de ma formation, au sein d'une équipe de 4 personnes, j'ai réalisé un site
-                        permettant de trouver le meilleur outil de marketing automation pour son entreprise.
-                            <br>Les principales fonctionnalités sont :
-                            <br>
-                                <li> un moteur de recherche et un algorithme pour affiner la pertinence des résultats,</li>
-                            <br>
-                                <li>un outil d'import/export de base de données permettant l'évolution du schema,</li>
-                            <br>
-                                <li> une fonctionnalité de comparaison des produits entre eux.</li>
-                            <br>
-                                <b>Technologies :</b> Symfony 3.3, Materialize,
-                        </p>
-                                <div class="links">
-                                    <a href="https://laravel.com/docs">Voir toutes mes réalisations</a>
-                                </div>
-                            </div>
-
-                            <div class="barre"></div>
-                        </div>
-                    <div class="real">
-
-                    <div class="content-real">
-                        <h2> Derniers articles publiés </h2>
-                        <h3>Hackathon n°2 : une app pour Google Home</h3>
-                        <p>Ces deux derniers jours ont été entièrement consacrés à un hackathon, issu d’un partenariat entre mon école et l’Efap, une école de communication. L’objectif était de trouver une idée (et de la réaliser techniquement 😉 ) d’app pour Sushi Shop, sur Google Home. J’étais ravie de travailler sur Google Home, car cela m’a permis de découvrir le monde des chatbots.…
-
-                        </p>
-                    </div>
-                    </div>
-                    <div class="real">
-                        <div class="content-real">
-                        <h3>Hackathon n°2 : une app pour Google Home</h3>
-                        <p>Ces deux derniers jours ont été entièrement consacrés à un hackathon, issu d’un partenariat entre mon école et l’Efap, une école de communication. L’objectif était de trouver une idée (et de la réaliser techniquement 😉 ) d’app pour Sushi Shop, sur Google Home. J’étais ravie de travailler sur Google Home, car cela m’a permis de découvrir le monde des chatbots.…
-
-                        </p>
-                        </div>
-                    </div>
-                    <div class="barre"></div>
-
                 </div>
-                @endsection
-@section('navbar')
-    @parent
+            </div>
+            <?php $i++;?>
+            <?php if($i % 3 === 0) {?>
+    </div>
+    <div class="row">
+        <?php
+
+        }
+        ?>
+        @endforeach
+
+    </div>
+
 @endsection
 
 
