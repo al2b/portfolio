@@ -28,6 +28,7 @@ class StoreArticlePost extends FormRequest
             'description' => 'required',
             'contenu' => 'required',
             'slug' => 'required',
+            'img' => 'required|image|max:2000'
         ];
     }
 

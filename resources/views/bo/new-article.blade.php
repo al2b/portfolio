@@ -50,11 +50,17 @@
 
     </div>
 
-            <div class="form-group">
-                {!! Form::label('img', 'img :') !!}
-                {!! Form::text('img', null, ['class' => 'form-control']) !!}
-                {!! $errors->first('img', '<small class="help-block">:message</small>') !!}
-
+            <div class="form-group{{ $errors->has('img') ? ' is-invalid' : '' }}">
+                {!! Form::label('img', 'Image :') !!}
+                <div class="custom-file">
+                    <input type="file" id="img" name="img" class="{{ $errors->has('img') ? ' is-invalid ' : '' }}custom-file-input" required>
+                    <label class="custom-file-label" for="img"></label>
+                    @if ($errors->has('img'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('img') }}
+                        </div>
+                    @endif
+                </div>
             </div>
 
             <div class="form-group">
@@ -93,6 +99,15 @@
 
         };
         tinymce.init(editor_config);
+    </script>
+    <script>
+            $('input[type="file"]').change(function () {
+                var fieldVal = $(this).val();
+                if (fieldVal != undefined || fieldVal != "") {
+
+                $(this).next(".custom-file-label").text(fieldVal)
+            }
+        });
     </script>
 @endsection
 @section('footer')
