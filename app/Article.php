@@ -22,7 +22,7 @@ class Article extends Model
 
     public function lastArticles($nb){
         $articles = Article::where('active', 1)
-            ->orderBy('created_at', 'desc')
+            ->orderBy('created_at', 'asc')
             ->take($nb)
             ->get();
     }

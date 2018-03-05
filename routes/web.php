@@ -16,7 +16,7 @@ Route::namespace('Main')->group(function () {
 });
 
 Route::namespace('Work')->group(function () {
-    Route::get('/my-work',"WorkController@showWork");
+    Route::get('/mes-realisations',"WorkController@showWork");
 
 });
 

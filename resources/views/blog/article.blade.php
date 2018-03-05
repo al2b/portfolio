@@ -21,7 +21,8 @@
 
 
                     <div class="col-4">
-                        <img src="{{ asset('img/nicolas.png') }}" alt="" class="img-float-right img-fluid">
+                        <img src="/../img/{{$article->img}}" alt="{{  $article->title  }}"
+                             class="img-fluid">
                     </div>
                 </div>
                     {!! $article->contenu  !!}

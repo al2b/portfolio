@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    Créer un nouvel article
                 </div>
             </div>
         </div>

@@ -11,7 +11,8 @@ use Illuminate\Http\Response;
 class BlogController extends Controller
 {
     public function welcomeblog(){
-        $articles =  Article::with('category')->get();
+        $articles =  Article::with('category')->orderByDesc("created_at")->get();
+
         $categories = Category::all();
         return view('blog.welcomeblog',
             ['articles'=> $articles,
