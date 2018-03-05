@@ -34,8 +34,8 @@
                     <a class="nav-link {!!(Request::is('blog')) ? ' active ' : '' !!}" href="/blog">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {!!(Request::is('my-work')) ? ' active ' : '' !!}"
-                       href="/my-work">Réalisations</a>
+                    <a class="nav-link {!!(Request::is('mes-realisations')) ? ' active ' : '' !!}"
+                       href="/mes-realisations">Réalisations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {!!(Request::is('cv')) ? ' active ' : '' !!}" href="/cv">CV</a>
@@ -64,7 +64,7 @@
                 <a class="nav-link" href="/cv">CV</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/my-work">Réalisations</a>
+                <a class="nav-link" href="/mes-realisations">Réalisations</a>
             </li>
         </ul>
         </div>
