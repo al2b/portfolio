@@ -20,7 +20,7 @@
 
         <div class="col">
         <h1>Ecrire un nouvel article</h1>
-        {{ Form::open(['url' => 'posts/store']) }}
+        {{ Form::open(['url' => 'posts/store', 'files' => true]) }}
 
             <div class="form-group">
                 {{ Form::label('title', 'Title :') }}
@@ -51,11 +51,11 @@
     </div>
 
             <div class="form-group">
-                {!! Form::label('img', 'img :') !!}
-                {!! Form::text('img', null, ['class' => 'form-control']) !!}
+                {!! Form::label('img', 'image :') !!}
+                {!! Form::file('img', null, ['class' => 'form-control']) !!}
                 {!! $errors->first('img', '<small class="help-block">:message</small>') !!}
-
             </div>
+
 
             <div class="form-group">
         {!! Form::label('active', 'Actif :') !!}
@@ -94,6 +94,7 @@
         };
         tinymce.init(editor_config);
     </script>
+
 @endsection
 @section('footer')
 @parent

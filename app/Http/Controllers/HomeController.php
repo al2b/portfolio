@@ -8,6 +8,8 @@ use Faker\Provider\DateTime;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Category;
+use Illuminate\Support\Facades\Storage;
+
 
 class HomeController extends Controller
 {
@@ -64,6 +66,8 @@ class HomeController extends Controller
 
         $article->title = $input["title"];
         $article->description = $input["description"];
+        $path = Storage::disk('img')->put('', $request->file('img'));
+        $article->img = $path;
         $article->contenu = $input["contenu"];
         $article->slug = $input["slug"];
         $article->active = $input["active"];
