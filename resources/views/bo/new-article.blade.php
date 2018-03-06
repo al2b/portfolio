@@ -20,7 +20,7 @@
 
         <div class="col">
         <h1>Ecrire un nouvel article</h1>
-        {{ Form::open(['url' => 'posts/store']) }}
+        {{ Form::open(['url' => 'posts/store', 'files' => true]) }}
 
             <div class="form-group">
                 {{ Form::label('title', 'Title :') }}
@@ -50,18 +50,12 @@
 
     </div>
 
-            <div class="form-group{{ $errors->has('img') ? ' is-invalid' : '' }}">
-                {!! Form::label('img', 'Image :') !!}
-                <div class="custom-file">
-                    <input type="file" id="img" name="img" class="{{ $errors->has('img') ? ' is-invalid ' : '' }}custom-file-input" required>
-                    <label class="custom-file-label" for="img"></label>
-                    @if ($errors->has('img'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('img') }}
-                        </div>
-                    @endif
-                </div>
+            <div class="form-group">
+                {!! Form::label('img', 'image :') !!}
+                {!! Form::file('img', null, ['class' => 'form-control']) !!}
+                {!! $errors->first('img', '<small class="help-block">:message</small>') !!}
             </div>
+
 
             <div class="form-group">
         {!! Form::label('active', 'Actif :') !!}
@@ -100,15 +94,7 @@
         };
         tinymce.init(editor_config);
     </script>
-    <script>
-            $('input[type="file"]').change(function () {
-                var fieldVal = $(this).val();
-                if (fieldVal != undefined || fieldVal != "") {
 
-                $(this).next(".custom-file-label").text(fieldVal)
-            }
-        });
-    </script>
 @endsection
 @section('footer')
 @parent
