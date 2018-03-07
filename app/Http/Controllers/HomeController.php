@@ -93,9 +93,11 @@ class HomeController extends Controller
             );
     }
 
-    public function remove($id){
-        Post::destroy($id);
-        return redirect()->action('HomeController@index');
+    public function remove(Request $request, $id){
+
+       $article = Article::findOrFail($id);
+       $article->delete();
+       return redirect()->action('HomeController@index');
     }
 
     public function update($id){
