@@ -41,7 +41,13 @@
 
                                     <td>{{$article->title}}</td>
                                     <td>{{$article->description}}</td>
-                                    <td>Modifier</td>
+                                    <td><form action="{{ route('edit', ['id' => $article->id]) }}" method="post">
+                                            {{ csrf_field() }}
+                                            {{ method_field('GET') }}
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-info">EDIT</button>
+                                            </div>
+                                        </form></td>
                                     <td><form action="{{ route('remove', ['id' => $article->id]) }}" method="post">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}

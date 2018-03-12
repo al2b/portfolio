@@ -100,9 +100,16 @@ class HomeController extends Controller
        return redirect()->action('HomeController@index');
     }
 
-    public function update($id){
-        Post::destroy($id);
-        return redirect()->action('HomeController@index');
+    public function edit($id){
+        $article = Article::where('id', $id)->firstOrFail();
+        return view('bo.edit-article',
+            ['article'=> $article ]
+        );
     }
 
+    public function update(Request $request, $id){
+        $article = Article::where('id', $id)->firstOrFail(); /* trouve l'entrée en DB */
+        $article->update($request->intersect(['title', 'contenu', 'description', 'img', 'img'])); /*récupère les valeurs suivantes */
+        return redirect()->back(); /* redirige vers la vue d'édition */
+    }
 }
