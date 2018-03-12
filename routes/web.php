@@ -46,5 +46,7 @@ Route::get('/posts/create', 'HomeController@createArticle');
 
 Route::post('/posts/store', 'HomeController@store');
 Route::get('/posts/{id}', 'HomeController@view');
-Route::post('posts/{id}/update', 'HomePostController@update');
+Route::get('/posts/{id}/edit', 'HomeController@edit')->name('edit');
+Route::post('posts/{id}/update', 'HomeController@update')->name('update');
+Route::delete('/delete/{id}', 'HomeController@remove')->name('remove');
 
