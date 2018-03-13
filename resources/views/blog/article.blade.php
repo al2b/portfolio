@@ -11,6 +11,7 @@
 
         <div class="col">
             <div class="card">
+                <p><a href="{{URL::route('welcomeblog')}}"> <i class="fas fa-chevron-left"></i> Retourner à la liste des articles</a></p>
                 <h1>{!!  $article->title  !!}</h1>
 
                 <p><i>Publié le : {!! date('d-m-Y', strtotime($article->created_at)) !!} par Anne-Laure</i></p>
@@ -33,6 +34,7 @@
 
                     @endforeach
                     </ul>
+                <p><a href="{{URL::route('welcomeblog')}}"> <i class="fas fa-chevron-left"></i> Retourner à la liste des articles</a></p>
 
             </div>
         </div>
