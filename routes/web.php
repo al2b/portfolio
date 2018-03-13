@@ -32,7 +32,9 @@ Route::namespace('Fo')->group(function () {
     Route::get('/cv', function () {
         return view('cv');
     });
-
+    Route::get('/contact', function () {
+        return view('contact');
+    });
 
 
 
