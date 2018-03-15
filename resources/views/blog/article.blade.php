@@ -27,7 +27,7 @@
                     </div>
                 </div>
                     {!! $article->contenu  !!}
-                    <p><b>Voir d'autres articles :</b></p>
+                    <p><b>Voir les derniers articles publiés :</b></p>
                     <ul>
                 @foreach ($articles as $arti)
                             <li> <a href="{!! $arti->slug !!}"> {!! $arti->title !!} </a> </li>
