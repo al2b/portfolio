@@ -46,7 +46,7 @@ class HomeController extends Controller
     {
         $categories = Category::all();
         $select = [];
-        foreach($categories as $category){
+        foreach ($categories as $category) {
             $select[$category->id] = $category->name;
         }
 
@@ -72,7 +72,7 @@ class HomeController extends Controller
         $article->slug = $input["slug"];
         $article->active = $input["active"];
         $article->created_at = Carbon::now();
-        if(!empty($input["category"])) {
+        if (!empty($input["category"])) {
             $article->category_id = $input["category"];
         }
         $article->save();
@@ -84,32 +84,51 @@ class HomeController extends Controller
      *
      * @return Response
      */
-    public function view($id){
+    public function view($id)
+    {
 
-        $article =  Article::findOrFail($id);
+        $article = Article::findOrFail($id);
 
         return view('bo.display-article',
-            ['article'=> $article ]
-            );
-    }
-
-    public function remove(Request $request, $id){
-
-       $article = Article::findOrFail($id);
-       $article->delete();
-       return redirect()->action('HomeController@index');
-    }
-
-    public function edit($id){
-        $article = Article::where('id', $id)->firstOrFail();
-        return view('bo.edit-article',
-            ['article'=> $article ]
+            ['article' => $article]
         );
     }
 
-    public function update(Request $request, $id){
-        $article = Article::where('id', $id)->firstOrFail(); /* trouve l'entrée en DB */
-        $article->update($request->intersect(['title', 'contenu', 'description', 'img', 'img'])); /*récupère les valeurs suivantes */
+    public function remove(Request $request, $id)
+    {
+
+        $article = Article::findOrFail($id);
+        $article->delete();
+        return redirect()->action('HomeController@index');
+    }
+
+    public function edit($id)
+    {
+        $article = Article::where('id', $id)->firstOrFail();
+        return view('bo.edit-article',
+            ['article' => $article]
+        );
+    }
+
+    public function update(Request $request, $id)
+    {
+
+
+        $article = Article::findOrFail($id)->first(); //->fill($request->all())->save();
+        $image = $article->img;
+
+        if ($request->hasFile('img')) {
+            $article->fill($request->all());
+            $path = Storage::disk('img')->put('', $request->file('img'));
+            $article->img = $path;
+            $article->save();
+        } else {
+            $article->fill($request->all());
+            $article->img = $image;
+            $article->save();
+        }
+        session()->flash('message', 'Successfully updated the post');
         return redirect()->back(); /* redirige vers la vue d'édition */
+
     }
 }
