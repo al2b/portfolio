@@ -21,10 +21,6 @@
                     </div>
 
 
-                    <div class="col-4">
-                        <img src="/../img/{{$article->img}}" alt="{{  $article->title  }}"
-                             class="img-fluid">
-                    </div>
                 </div>
                     {!! $article->contenu  !!}
                     <p><b>Voir les derniers articles publiés :</b></p>

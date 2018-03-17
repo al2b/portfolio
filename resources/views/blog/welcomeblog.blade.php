@@ -45,10 +45,10 @@
                         else
                         {
                         ?>
-                        <div class="col-4"><img src="img/{{$article->img}}" alt="{{  $article->title  }}"
+                        <div class="col-4 col-sm-12"><img src="img/{{$article->img}}" alt="{{  $article->title  }}"
                                                 class="img-fluid"></div>
 
-                        <div class="col"><p>{!! $article->description  !!}</p>
+                        <div class="col-8 col-sm-12"><p>{!! $article->description  !!}</p>
                             <a href="blog/{{ $article->slug }}"> Lire la suite </a>
                         </div>
 
