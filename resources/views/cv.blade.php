@@ -27,8 +27,8 @@
                         <p><b>Technologies:</b> PHP, Zend Expressive, Rabbit MQ, SQL, Doctrine, SOAP</p>
                     </ul>
                 </div>
-                <div class="col-4 hidden-sm">
-                    <img src="{{ asset('img/mister-auto.jpg') }}" class="img-fluid img-minus ">
+                <div class="col-4 d-none d-sm-block">
+                    <img src="{{ asset('img/mister-auto.jpg') }}" class="d-none d-sm-block img-fluid img-minus ">
                 </div>
 
             </div>
@@ -46,8 +46,8 @@
                     </ul>
                 </div>
 
-                <div class="col-4 hidden-sm">
-                    <img src="{{ asset('img/cmonassurance.jpg') }}" class="img-fluid img-minus ">
+                <div class="col-4 d-none d-sm-block">
+                    <img src="{{ asset('img/cmonassurance.jpg') }}" class="d-none d-sm-block img-fluid img-minus ">
                 </div>
             </div>
 
@@ -67,8 +67,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-4 hidden-sm">
-                    <img src="{{ asset('img/logo-cybercite.png') }}" class="img-fluid img-minus ">
+                <div class="col-4 d-none d-sm-block">
+                    <img src="{{ asset('img/logo-cybercite.png') }}" class="d-none d-sm-block img-fluid img-minus ">
                 </div>
             </div>
             <div class="row">
@@ -91,8 +91,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-4 hidden-sm">
-                    <img src="{{ asset('img/idep-multimedia.gif') }}" class="img-fluid img-minus ">
+                <div class="col-4 d-none d-sm-block hidden-sm">
+                    <img src="{{ asset('img/idep-multimedia.gif') }}" class="d-none d-sm-block img-fluid">
                 </div>
             </div>
 
@@ -121,9 +121,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-4 hidden-sm-down">
+                <div class="col-4 d-none d-sm-block hidden-sm">
                     <img src="{{ asset('img/wild-code-school.jpg') }}"
-                         class="hidden-md-down img-fluid img-minus ">
+                         class="d-none d-sm-block img-minus ">
                 </div>
             </div>
             <h3>Certification opquast</h3>

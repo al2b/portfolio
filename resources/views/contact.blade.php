@@ -7,11 +7,23 @@
     <div class="row">
         <div class="col">
             <div class="row">
-                <div class="col">
-                    <h1>Contactez-moi <i class="fas fa-heart"></i>
+                <div class="col card">
+
+                    <h1>Contactez-moi <i class="fab fa-angellist"></i>
+
+
 
                     </h1>
-                    <p>En attendant le formulaire, je vous propose de me suivre sur Linkedin ou Twitter.</p>
+                    <p>En attendant le formulaire, quelques moyens de me contacter :</p>
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/AnneLaure2B"> Sur Twitter</a>;
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/anne-laure-de-boissieu/"> Sur Linkedin</a>.
+                        </li>
+                    </ul>
+
                 </div>
         </div>
     </div>

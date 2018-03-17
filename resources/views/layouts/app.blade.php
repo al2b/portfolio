@@ -53,7 +53,7 @@
     @yield('content')
 
     @section('footer')
-        <div class="col">
+        <div class="col-12 ">
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link" href="/">Accueil</a>

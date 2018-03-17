@@ -20,7 +20,7 @@
 
                 <h2>Moteur de recherche / comparateur : comparer.pro</h2>
                 <div class="row">
-                    <div class="col-4 d-none d-sm-block"><img src="{{ asset('img/compare-pro.png') }}" alt="comparer.pro" class="d-none d-sm-block img-real img-fluid">
+                    <div class="col-4 d-none d-sm-block"><img src="{{ asset('img/compare-pro.png') }}" alt="comparer.pro" class="d-none d-sm-block img-fluid">
                     </div>
                     <div class="col">
                         <p>Dans le cadre de ma formation, au sein d'une équipe de 4 personnes, j'ai réalisé un site
