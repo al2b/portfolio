@@ -35,10 +35,10 @@
                     <div class="row">
                         <?php if($i % 2) {?>
 
-                        <div class="col"><p>{{ $article->description  }}</p>            <a
+                        <div class="col-8 col-sm-12"><p>{{ $article->description  }}</p>            <a
                                     href="blog/{{ $article->slug }}"> Lire la suite </a>
                         </div>
-                        <div class="col-4"><img src="img/{{$article->img}}" alt="{{  $article->title  }}"
+                        <div class="col-4 col-sm-12"><img src="img/{{$article->img}}" alt="{{  $article->title  }}"
                                                 class="img-fluid"></div>
                         <?php
                         }

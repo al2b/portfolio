@@ -60,9 +60,9 @@ h1, h2 {
     margin-right: 0; }
   .col:first-child {
     margin-left: 0; }
-  .col h1 {
+  .col h1, .col h2 {
     color: #2ab27b; }
-  .col h2, .col h3, .col h4, .col h5 {
+  .col h3, .col h4, .col h5 {
     font-size: 1.5em; }
   .col a {
     color: #2ab27b; }
@@ -78,11 +78,9 @@ h1, h2 {
   .card .card-body {
     padding: 0; }
 
-img {
-  width: auto; }
-
-.img-real {
-  margin-top: 30px; }
+.img-minus {
+  width: 200px;
+  height: 200px; }
 
 /* ---- reset ---- */
 /* ---- particles.js container ---- */

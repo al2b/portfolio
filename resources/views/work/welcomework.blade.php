@@ -20,7 +20,7 @@
 
                 <h2>Moteur de recherche / comparateur : comparer.pro</h2>
                 <div class="row">
-                    <div class="col-4 d-none d-sm-block"><img src="{{ asset('img/compare-pro.png') }}" alt="comparer.pro" class="d-none d-sm-block img-real img-fluid">
+                    <div class="col-4 d-none d-sm-block"><img src="{{ asset('img/compare-pro.png') }}" alt="comparer.pro" class="d-none d-sm-block img-fluid">
                     </div>
                     <div class="col">
                         <p>Dans le cadre de ma formation, au sein d'une équipe de 4 personnes, j'ai réalisé un site
@@ -51,7 +51,7 @@
                 <h2>Portfolio</h2>
                 <div class="row">
                     <div class="col">
-                        <p>Le site sur lequel vous naviguez a été un excellent exercice ! J'ai décidé d'utiliser le framework Laravel pour les besoins minimes de mon portfolio, qui nécessitent en effet de n'afficher que quelques vues et de stocker des articles pour la partie blog. <p>J'ai donc développé un simple espace d'administration où je peux créer, modifier, supprimer articles et catégories du blog.  </p>
+                        <p>Le site sur lequel vous naviguez a été un excellent exercice ! J'ai décidé d'utiliser le framework Laravel pour les besoins minimes de mon portfolio, qui nécessitent en effet de n'afficher que quelques vues et de stocker des articles pour la partie blog. <p>J'ai donc développé un simple espace d'administration où je peux créer, modifier, supprimer les articles.  </p>
                         <p>Ce portfolio m'a également permis de gérer de A à Z la mise en place d'un serveur et de la mise en ligne de mon site :)</p>
                         <br>
                         <b>Technologies :</b> Laravel 5.5, MySQL, Eloquent, Blade.

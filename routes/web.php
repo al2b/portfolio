@@ -22,7 +22,7 @@ Route::namespace('Work')->group(function () {
 
 Route::namespace('Fo')->group(function () {
 
-    Route::get('/blog',"BlogController@welcomeblog");
+    Route::get('/blog',"BlogController@welcomeblog")->name('welcomeblog');
 
     Route::get('/blog/{slug}',"BlogController@show");
 
@@ -32,7 +32,9 @@ Route::namespace('Fo')->group(function () {
     Route::get('/cv', function () {
         return view('cv');
     });
-
+    Route::get('/contact', function () {
+        return view('contact');
+    });
 
 
 
