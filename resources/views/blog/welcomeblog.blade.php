@@ -31,7 +31,7 @@
                 <div class="card">
 
                     <h2><a href="blog/{{ $article->slug }}">{{  $article->title  }}</a></h2>
-                    <p>Publié le : {{ $article->created_at }}</p>
+                    <p>Publié le : {!! date('d-m-Y', strtotime($article->created_at)) !!}</p>
                     <div class="row">
                         <?php if($i % 2) {?>
 
