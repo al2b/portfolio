@@ -14,7 +14,7 @@
 
 
                     </h1>
-                    <p>En attendant le formulaire, quelques moyens de me contacter :</p>
+                    <p>Quelques moyens de me contacter :</p>
                     <ul>
                         <li>
                             <a href="https://twitter.com/AnneLaure2B"> Sur Twitter</a>;
