@@ -29,6 +29,13 @@
 
             </div>
 
+            <div class="form-group">
+                {{ Form::label('created-at', 'Créé :') }}
+                {{ Form::date('created-at', \Carbon\Carbon::now()) }}
+                {!! $errors->first('created-at', '<small class="help-block">:message</small>') !!}
+
+            </div>
+
     <div class="form-group">
         {!! Form::label('description', 'Description :') !!}
         {!! Form::textarea('description', null, ['class' => 'form-control']) !!}

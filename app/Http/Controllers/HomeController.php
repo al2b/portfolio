@@ -71,7 +71,7 @@ class HomeController extends Controller
         $article->contenu = $input["contenu"];
         $article->slug = $input["slug"];
         $article->active = $input["active"];
-        $article->created_at = Carbon::now();
+        $article->created_at = $input["created-at"];
         if (!empty($input["category"])) {
             $article->category_id = $input["category"];
         }
@@ -112,7 +112,6 @@ class HomeController extends Controller
 
     public function update(Request $request, $id)
     {
-
 
         $article = Article::findOrFail($id)->first(); //->fill($request->all())->save();
         $image = $article->img;

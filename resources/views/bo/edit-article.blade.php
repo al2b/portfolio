@@ -9,16 +9,36 @@
 
     <div class="row">
 
-        <a href="{{ URL::action('HomeController@index') }}">Retour à la liste</a>
 
         <div class="col">
+            <a href="{{ URL::action('HomeController@index') }}">Retour à la liste</a>
+
             <h1>Modifier l'article</h1>
             {{ Form::model($article, [ 'url' => URL::action('HomeController@update', $article ), 'method' => 'update'])}}
-            <p>{{ Form::label('title', 'Titre :') }} {{ Form::text('title') }}</p>
-            <p>{{ Form::label('description', 'description :') }} {{ Form::textarea('description') }}</p>
-            <p>{{ Form::label('content', 'Contenu :') }} {{ Form::textarea('contenu') }}</p>
-            <p>{{ Form::label('slug', 'slug :') }} {{ Form::text('slug') }}</p>
-            <p>{{ Form::label('img', 'image :') }} {{ Form::file('img') }}</p>
+            <p>
+                {{ Form::label('title', 'Titre :') }}
+                {{ Form::text('title') }}
+            </p>
+            <p>
+                {{ Form::label('description', 'description :') }}
+                {{ Form::textarea('description') }}
+            </p>
+            <p>
+                {{ Form::label('content', 'Contenu :') }}
+                {{ Form::textarea('contenu') }}
+            </p>
+            <p>
+                {{ Form::label('slug', 'slug :') }}
+                {{ Form::text('slug') }}
+            </p>
+            <p>
+                {{ Form::label('img', 'image :') }}
+                {{ Form::file('img') }}
+            </p>
+            <p>
+                {{ Form::label('created_at', 'Créé :') }}
+                {{ Form::date('created_at') }}
+            </p>
             {{ Form::submit() }}
             {{ Form::close() }}
         </div>
