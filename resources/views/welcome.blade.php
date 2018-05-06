@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Anne-Laure, développeuse web PHP')
+@section('title', 'Anne-Laure, développeuse web PHP : site et blog')
 
 @section('navbar')
     @parent

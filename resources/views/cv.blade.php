@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Page Title')
+@section('title', 'Mon parcours professionnel et mes formations')
 @section('navbar')
     @parent
 @endsection
