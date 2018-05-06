@@ -1,6 +1,5 @@
 @extends('layouts.app')
-
-@section('title', 'Page Title')
+@section('title', 'Découvrez mes travaux - PHP, Symfony, Laravel')
 
 @section('navbar')
     @parent

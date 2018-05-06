@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Page Title')
+@section('title', 'Contactez-moi !')
 @section('navbar')
     @parent
 @endsection

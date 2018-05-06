@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Page Title')
+@section('title', 'Blog : tous les articles')
 
 @section('navbar')
     @parent
